@@ -7,14 +7,24 @@
   <body>
   <p>To-Do List</p>
 <!-- //build a form with an input box that says "add a todo", with a submit button that sends the info into a styled list below. -->
-  <form class="" action="index.html" method="post">
+
+
+  <form class="" action="/" method="post">
     <label for="add a todo" name="add a todo"></label>
-    <input type="text" name="" value="">
+    <span><input type="text" name="addToList" value="">  <input class="button"type="submit" value="go"></span>
 <!-- //how do I make the list editable? -->
   </form>
-  {{ #todos }}
-<p>{{ task }}</p>
-  {{ /todos }}
+<!-- Above is the form where user enters new todos -->
 
+
+  <!-- Below is where the list of todos shows up -->
+  {{ #todos }}
+    <li>
+  <button type="hidden" name="button" method="post">mark as complete</button>
+  <p> task: {{ task }}</p>
+   </li>
+
+  {{ /todos }}
+  <!-- above acts as a loop -->
   </body>
 </html>
